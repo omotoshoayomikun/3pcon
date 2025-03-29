@@ -1,0 +1,82 @@
+ @import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+:root {
+  --bg-dark-blue: #09224E;
+  --auternative-bg-dark-blue: #092351;
+  --bg-dark-lightblue: #45A3D6;
+  --fixed-h-value: 70px;
+  --shared-px: 64px;
+  --shared-py: 60px;
+}
+
+.nav-bg-home {
+  background: linear-gradient(-120deg, #09224E 0%, #41CFD2 130%);
+}
+
+.nav-bg-shared {
+background: var(--auternative-bg-dark-blue);
+}
+
+.special-text {
+  font-weight: bold;
+  color: var(--bg-dark-blue);
+  position: relative;
+  width: max-content;
+}
+
+.special-text::before {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 5px;
+  background-color: var(--bg-dark-lightblue);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  bottom: 0px;
+  right: 0;
+}
+
+
+@media (width <= 1000px) {
+  :root {
+    --shared-px: 40px;
+    --shared-py: 50px;
+  }
+}
+
+@media (width <= 590px) {
+  :root {
+    --shared-px: 15px;
+    --shared-py: 30px;
+  }
+}
+
+/*
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+} */

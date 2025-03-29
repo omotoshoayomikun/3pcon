@@ -1,0 +1,56 @@
+.footer {
+  width: 100%;
+  height: calc(80vh - 70px);
+  background: url("../../../public/images/hero2.png"),
+    linear-gradient(238.12deg, #09224e 39.46%, #0e429f 136.78%);
+  background-size: cover;
+  mix-blend-mode: soft-light;
+  background-position: bottom;
+  padding: 50px 64px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  width: 220px;
+  height: 220px;
+  content: "";
+  position: absolute;
+  background: url("../../../public/images/solution/group1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: -100px;
+  bottom: 0px;
+  z-index: -1;
+  animation: edge-left 2s ease-in-out alternate-reverse infinite;
+}
+
+.footer::after {
+  width: 290px;
+  height: 290px;
+  content: "";
+  position: absolute;
+  background: url("../../../public/images/solution/group1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  right: -180px;
+  top: -40px;
+  transform: rotate(10deg);
+  z-index: -1;
+  animation: edge-right 2s ease-in-out alternate-reverse infinite;
+}
+
+@keyframes edge-right {
+  to {
+    transform: translateY(-30px) rotate(10deg);
+  }
+}
+@keyframes edge-left {
+  to {
+    transform: translateY(-30px);
+  }
+}

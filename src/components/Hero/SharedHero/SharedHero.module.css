@@ -1,0 +1,69 @@
+.container {
+  width: 100%;
+  height: 320px;
+  background: url("../../../../public/images/hero2.png") 0 100%,
+    linear-gradient(238.12deg, #09224e 39.46%, #0e429f 136.78%);
+  background-size: 100%;
+  mix-blend-mode: soft-light;
+  /* transform: matrix(-1, 0, 0, 1, 0, 0); */
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+@media (width <= 1000px) {
+  .container {
+    height: 250px;
+  }
+}
+
+@media (width <= 500px) {
+  .container {
+    height: 180px;
+  }
+}
+
+.container::before {
+  width: 220px;
+  height: 220px;
+  content: "";
+  position: absolute;
+  background: url("../../../../public/images/solution/group1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: -100px;
+  top: 0px;
+  z-index: -1;
+  animation: edge-left 2s ease-in-out alternate-reverse infinite;
+}
+
+.container::after {
+  width: 290px;
+  height: 290px;
+  content: "";
+  position: absolute;
+  background: url("../../../../public/images/solution/group1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  right: -180px;
+  bottom: -40px;
+  transform: rotate(10deg);
+  z-index: -1;
+  animation: edge-right 2s ease-in-out alternate-reverse infinite;
+}
+
+
+@keyframes edge-right {
+  to {
+    transform: translateY(-30px) rotate(10deg);
+  }
+}
+@keyframes edge-left {
+  to {
+    transform: translateY(-30px);
+  }
+}

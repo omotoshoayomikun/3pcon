@@ -1,0 +1,10 @@
+.Cus_button {
+    background-color: var(--bg-dark-blue);
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

@@ -1,0 +1,76 @@
+.hero {
+  width: 100vw;
+  margin-top: var(--fixed-h-value);
+  height: calc(100vh - var(--fixed-h-value));
+  display: flex;
+  align-items: center;
+  transition: all 1s ease;
+  color: #fff;
+  position: relative;
+}
+
+.hero_container {
+  width: 100%;
+  min-width: 100vw;
+  height: 100%;
+  padding-left: var(--shared-px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin: 0;
+  background: url("../../../public/images/hero.png") 0 100%,
+    linear-gradient(-120deg, #09224e 0%, #41cfd2 130%);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.side {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  /* flex-shrink: 0; */
+}
+
+.hero .side:first-child h1 {
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 4rem;
+  margin-bottom: 10px;
+}
+
+.hero .side:first-child p {
+  font-size: 22px;
+  line-height: 2rem;
+  margin-right: 20px;
+}
+
+.indicator {
+  width: 14px;
+  height: 14px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 2;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.hero_container .side:last-child {
+  height: 90%;
+  background: url("../../../public/images/solution/hero_clip.png") no-repeat;
+  background-size: cover;
+  mask-image: url("../../../public/images/solution/clip1.png"), url("../../../public/images/solution/clip2.png"), url("../../../public/images/solution/clip3.png");
+  mask-size: 490px 180px, 220px 300px, 290px 150px;
+  mask-repeat: no-repeat;
+  mask-position: 30px 0px, 25px 200px, 260px 200px;
+  animation: vector 4s infinite ease-in-out alternate-reverse ;
+  /* z-index: 10000; */
+}
+
+@keyframes vector {
+  to {
+    mask-position: 120px 0px, 0px 60px, 160px 200px;
+  }
+}
