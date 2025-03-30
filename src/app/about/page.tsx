@@ -58,6 +58,7 @@ function page() {
                 src={data.icon}
                 alt="icon image"
                 className=""
+                fill
               />
             </div>
             <div>
