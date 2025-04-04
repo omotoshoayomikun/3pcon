@@ -1,7 +1,7 @@
 .hero {
   width: 100vw;
   margin-top: var(--fixed-h-value);
-  height: calc(100vh - var(--fixed-h-value));
+  height: calc(100dvh - var(--fixed-h-value));
   /* min-height: 600px; */
   display: flex;
   align-items: center;
@@ -52,7 +52,7 @@
 .indicator_container {
   left: 0;
   right: 0;
-  top: 94%;
+  top: 94dvh;
   margin: auto;
   width: max-content;
   display: flex;
