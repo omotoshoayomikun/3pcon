@@ -11,20 +11,25 @@ function Navbar() {
     console.log(pathName)
 
   return (
-    <div className={` ${styles.nav_container} ${pathName == "/"? "nav-bg-home" : "nav-bg-shared"}`}>
+    <header className={` ${styles.nav_container} ${pathName == "/"? "nav-bg-home" : "nav-bg-shared"}`}>
       <Link href="/" className="relative w-[120px] h-full">
         <Image src="/images/3pcon_logo.svg" alt="3pcon image" fill />
       </Link>
-      <ul className="flex gap-6 list-none m-0 p-0 text-white">
+      <nav>
+        {/* THIS IS FOR SMALLER SCREEN HANDBUGER */}
+        <div className={styles.handbuger}></div>
+        {/* ------------------------------------ */}
+      <ul className={`${styles.nav_link}`}>
         {
             NavLinks.map((link, index) => (
-                <Link key={index} href={link.url} className={`${pathName == link.url ? "text-[#4AD3D5]" : "text-white"}`}>{link.title}</Link>
+              <li key={index}>
+                <Link href={link.url} className={`${pathName == link.url ? "text-[#4AD3D5]" : "text-white"}`}>{link.title}</Link>
+              </li>
             ))
         }
-        <li>
-        </li>
       </ul>
-    </div>
+      </nav>
+    </header>
   );
 }
 

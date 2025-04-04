@@ -1,0 +1,23 @@
+.contact_container {
+    display: flex;
+    padding-inline: var(--shared-px);
+    padding-block: var(--shared-py);
+    gap: 32px;
+    /* align-items: center;  */
+    width: 100%;
+}
+
+.image_container {
+    position: relative;
+    width: inherit;
+    /* height: 620px; */
+    aspect-ratio: 1 / 1;
+}
+
+@media (width <= 870px) {
+    .contact_container {
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+}   

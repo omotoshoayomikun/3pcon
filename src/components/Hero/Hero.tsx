@@ -67,7 +67,7 @@ function Hero() {
           </div>
         ))}
       </div>
-      <div className="absolute top-[94%] left-0 right-0 m-auto w-[max-content] flex gap-1.5">
+      <div className={styles.indicator_container}>
         {SliderData.map((data, index) => (
           <div
             key={index}

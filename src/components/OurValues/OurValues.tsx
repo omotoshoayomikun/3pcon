@@ -10,13 +10,13 @@ import styles from "./OurValues.module.css"
 function OurValues() {
    const pathName = usePathname();
   return (
-    <div className={`bg-[#ECE9CC] px-[var(--shared-px)]  ${pathName !== "/" ? "py-[var(--shared-py)]" : "py-[80px]"} w-full relative ${styles.container}`}>
+    <section className={`bg-[#ECE9CC] px-[var(--shared-px)]  ${pathName !== "/" ? "py-[var(--shared-py)]" : "py-[80px]"} w-full relative ${styles.container}`}>
       {/*  */}
       <div 
       className={`${styles.edge}`}
       style={{ display: pathName !== "/" ? "none" : "flex" }}
       >
-        <h1 className="text-[35px] font-semibold text-center text-white tracking-wider">
+        <h1 className="md:text-[35px] text-2xl font-semibold text-center text-white tracking-wider z-10">
           Have any Project?
         </h1>
         <div className="mx-auto w-[max-content]">
@@ -34,7 +34,7 @@ function OurValues() {
       {/*  */}
       <div className="relative z-[1]">
       <h1 className="text-[40px] font-extrabold text-center ">Our Values</h1>
-      <p className="text-center mb-18">
+      <p className="text-center mb-10">
         We are guided by our core Values of Customer Centricity, Courage,
         Respect and Collaboration
       </p>
@@ -53,7 +53,7 @@ function OurValues() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

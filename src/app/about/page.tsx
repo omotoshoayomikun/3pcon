@@ -16,7 +16,7 @@ function page() {
   return (
     <div className="mt-[var(--fixed-h-value)]">
       <SharedHero value={NavInfo} headerText="About us" />
-      <div className="px-[var(--shared-px)] py-[var(--shared-py)] flex gap-10 ">
+      <div className="px-[var(--shared-px)] py-[var(--shared-py)] flex flex-col-reverse md:flex-row gap-10 ">
         <div className="flex-[1.5]">
           <h2 className="mb-7 text-[35px] font-extrabold leading-10">
             Empowering Businesses with Tech and Digital Innovation
@@ -47,7 +47,7 @@ function page() {
           </div>
         </div>
       </div>
-      <div className="bg-[#F1FFFF] grid grid-cols-2 gap-8 px-[var(--shared-px)] py-16">
+      <div className="bg-[#F1FFFF] grid md:grid-cols-2 grid-cols-1 gap-8 px-[var(--shared-px)] py-16">
         {AboutData.map((data, index) => (
           <div
             key={index}
@@ -70,7 +70,7 @@ function page() {
       </div>
       <OurValues />
       <div
-        className={`bg-[#ffffff] px-16  py-[var(--shared-py)] w-full relative`}
+        className={`bg-[#ffffff] px-[var(--shared-px)]  py-[var(--shared-py)] w-full relative`}
       >
         <h2 className="mb-7 text-[35px] font-extrabold leading-10 text-center">
           Why 3PCON?

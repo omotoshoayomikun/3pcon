@@ -1,12 +1,13 @@
 .footer {
   width: 100%;
-  height: calc(80vh - 70px);
+  height: auto;
   background: url("../../../public/images/hero2.png"),
     linear-gradient(238.12deg, #09224e 39.46%, #0e429f 136.78%);
   background-size: cover;
   mix-blend-mode: soft-light;
   background-position: bottom;
-  padding: 50px 64px;
+  padding-inline: var(--shared-px);
+  padding-block: var(--shared-py);
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -53,4 +54,9 @@
   to {
     transform: translateY(-30px);
   }
+}
+
+
+@media (width <= 870px) {
+  
 }

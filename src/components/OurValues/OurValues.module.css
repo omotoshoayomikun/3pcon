@@ -112,13 +112,79 @@
     }
   } */
 
-
+  .edge {
+    width: 60%;
+    height: 130px;
+    background: var(--bg-dark-blue);
+    position: absolute;
+    margin: auto;
+    top: -60px;
+    left: 0;
+    right: 0;
+    padding-block: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  
+  
+  .edge::before {
+    width: 250px;
+    height: 250px;
+    content: "";
+    position: absolute;
+    background: url("../../../public/images/solution/group1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: -30px;
+    left: -90px;
+    animation: edge-left 2s ease-in-out alternate-reverse infinite;
+  }
+  
+  .edge::after {
+    width: 250px;
+    height: 250px;
+    content: "";
+    position: absolute;
+    background: url("../../../public/images/solution/group1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: -40px;
+    right: -110px;
+    transform: rotate(10deg);
+    animation: edge-right 2s ease-in-out alternate-reverse infinite;
+  }
+  @keyframes edge-right {
+    to {
+      transform: translateY(-30px) rotate(10deg);
+    }
+    
+  }
+  @keyframes edge-left {
+    to {
+      transform: translateY(-30px);
+    }
+    
+  }
   
 @media (width <= 1000px) {
   .container_val {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+  }
+
+}
+
+
+@media (width <= 870px) {
+  .edge {
+    width: 90%;
+  }
+
+  .edge::before, .edge::after {
+    display: none;
   }
 }
   
@@ -128,60 +194,9 @@
     grid-template-columns: repeat(1, 1fr);
     /* gap: 32px; */
   }
-}
-
-.edge {
-  width: 60%;
-  height: 130px;
-  background: var(--bg-dark-blue);
-  position: absolute;
-  margin: auto;
-  top: -60px;
-  left: 0;
-  right: 0;
-  padding-block: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-
-.edge::before {
-  width: 250px;
-  height: 250px;
-  content: "";
-  position: absolute;
-  background: url("../../../public/images/solution/group1.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  top: -30px;
-  left: -90px;
-  animation: edge-left 2s ease-in-out alternate-reverse infinite;
-}
-
-.edge::after {
-  width: 250px;
-  height: 250px;
-  content: "";
-  position: absolute;
-  background: url("../../../public/images/solution/group1.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  top: -40px;
-  right: -110px;
-  transform: rotate(10deg);
-  animation: edge-right 2s ease-in-out alternate-reverse infinite;
-}
-@keyframes edge-right {
-  to {
-    transform: translateY(-30px) rotate(10deg);
+  .container::before {
+    display: none;
   }
-  
 }
-@keyframes edge-left {
-  to {
-    transform: translateY(-30px);
-  }
-  
-}
+
+

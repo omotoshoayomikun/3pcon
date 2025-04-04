@@ -1,61 +1,96 @@
 .trust_container {
-    display: flex;
-    padding-inline: var(--shared-px);
-    padding-block: var(--shared-py);
-    gap: 32px;
-    background: #F1FFFF;
-    position: relative;
+  display: flex;
+  flex-direction: row;
+  padding-inline: var(--shared-px);
+  padding-block: var(--shared-py);
+  gap: 32px;
+  background: #f1ffff;
+  position: relative;
 }
 
 .img {
-    position: relative;
-    width: 100%;
-    height: 520px;
-    z-index: 3;
+  position: relative;
+  width: 100%;
+  height: 520px;
+  z-index: 3;
 }
 
 .background_deco {
-    position: absolute;
-    bottom: 0;
-    width: 87%;
-    height: 70%;
-    background: #4AD3D5;
-    border-radius: 280px 0px 0px 0px;
-    right: 0;
-
+  position: absolute;
+  bottom: 0;
+  width: 87%;
+  height: 70%;
+  background: #4ad3d5;
+  border-radius: 280px 0px 0px 0px;
+  right: 0;
 }
 
 .background_deco::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 97%;
-    background: linear-gradient(163.24deg, #4AD3D5 -15.78%, #09224E 114.55%);
-    border-radius: 280px 0px 0px 0px;
-    right: 0;
-
-
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 97%;
+  background: linear-gradient(163.24deg, #4ad3d5 -15.78%, #09224e 114.55%);
+  border-radius: 280px 0px 0px 0px;
+  right: 0;
 }
 
 .vector {
-    position: absolute;
-    width: 50%;
-    height: 80%;
-    right: -100px;
-    top: 20px;
-    background: linear-gradient(117.48deg, #41CFD2 -53.97%, #409ED4 59.03%);;
-    mask-image: url("../../../public/images/solution/Vector123.png"), url("../../../public/images/solution/Vector123x.png"), url("../../../public/images/solution/Vector123xx.png");
-    mask-size: 490px 180px, 220px 300px, 290px 150px;
-    mask-repeat: no-repeat;
-    mask-position: 30px 0px, 25px 200px, 260px 200px;
-    animation: vector 4s infinite ease-in-out alternate-reverse ;
-    /* z-index: 10000; */
+  position: absolute;
+  width: 50%;
+  height: 80%;
+  right: -100px;
+  top: 20px;
+  background: linear-gradient(117.48deg, #41cfd2 -53.97%, #409ed4 59.03%);
+  mask-image: url("../../../public/images/solution/Vector123.png"),
+    url("../../../public/images/solution/Vector123x.png"),
+    url("../../../public/images/solution/Vector123xx.png");
+  mask-size: 75% 180px, 33% 300px, 45% 150px;
+  mask-repeat: no-repeat;
+  mask-position: 20% 0px, 25px 200px, 70% 200px;
+  animation: vector 4s infinite ease-in-out alternate-reverse;
+  /* z-index: 10000; */
 }
-  
+
+@keyframes vector {
+  to {
+    mask-position: 76% 0px, 0px 60px, 47% 200px;
+  }
+}
+
+.flex_float {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  width: 70%;
+  gap: 12px;
+}
+
+@media (width <= 870px) {
+  .trust_container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0px;
+  }
+
+  .vector {
+    width: 100%;
+    right: 0;
+    mask-size: 75% 120px, 33% 200px, 45% 110px;
+    mask-position: 50% 0px, 15% 130px, 85% 130px;
+  }
+
   @keyframes vector {
     to {
-      mask-position: 120px 0px, 0px 60px, 160px 200px;
+      mask-position: 86% 0px, 0px 20px, 40% 130px;
     }
   }
+
+  .flex_float {
+    margin-bottom: 50px;
+    width: 70%;
+    /* flex-direction: column; */
+  }
+}

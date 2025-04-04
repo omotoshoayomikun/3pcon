@@ -1,16 +1,66 @@
 .nav_container {
-    /* background: linear-gradient(-120deg, #09224E 0%, #41CFD2 130%); */
-    width: 100%;
-    height: 72px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-inline: 64px;
-    padding-block: 20px;
-    z-index: 10;
-    border-bottom: 1px solid #4586C2;
-    /* box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); */
+  /* background: linear-gradient(-120deg, #09224E 0%, #41CFD2 130%); */
+  width: 100%;
+  height: var(--fixed-h-value);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: var(--shared-px);
+  padding-block: 20px;
+  z-index: 10;
+  border-bottom: 1px solid #4586c2;
+  /* box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); */
+}
+
+.nav_link {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  position: relative;
+}
+
+.handbuger {
+  display: none;
+}
+
+@media (width <= 666px) {
+  .nav_link {
+    display: none;
+    position: absolute;
+  }
+
+  .handbuger {
+    display: block;
+    width: 32px;
+    height: 4px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .handbuger::before {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 4px;
+    background-color: white;
+    border-radius: 10px;
+    top: -7px;
+  }
+  .handbuger::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 4px;
+    background-color: white;
+    border-radius: 10px;
+    top: 7px;
+    right: 0;
+  }
 }

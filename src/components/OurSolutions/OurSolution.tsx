@@ -6,9 +6,9 @@ import Link from "next/link";
 
 function OurSolutions() {
   return (
-    <div className="px-[var(--shared-px)] py-[var(--shared-py)]">
+    <section className="px-[var(--shared-px)] py-[var(--shared-py)]">
       <div className="special-text">OUR SERVICES</div>
-      <h2 className="mb-7 text-[30px] font-bold">We Deliver The Best Solution</h2>
+      <h2 className="text-heading mb-5">We Deliver The Best Solution</h2>
       <div className={`md:mx-0 ${styles.card_container}`}>
         {OurServiceData.map((service, index) => (
           <div key={index} className={styles.card}>
@@ -52,7 +52,7 @@ function OurSolutions() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -5,6 +5,7 @@
 }
 
 body {
+  /* width: 100%; */
   overflow-x: hidden;
 }
 
@@ -30,6 +31,13 @@ background: var(--auternative-bg-dark-blue);
   color: var(--bg-dark-blue);
   position: relative;
   width: max-content;
+  margin-bottom: 0px;
+}
+
+.text-heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2rem;
 }
 
 .special-text::before {
@@ -52,11 +60,23 @@ background: var(--auternative-bg-dark-blue);
   }
 }
 
+
+@media (width <= 666px) {
+  :root {
+    --fixed-h-value: 60px;
+  }
+}
+
 @media (width <= 590px) {
   :root {
     --shared-px: 15px;
     --shared-py: 30px;
   }
+  
+.text-heading {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
 }
 
 /*

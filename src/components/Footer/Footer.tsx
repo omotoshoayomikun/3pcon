@@ -5,8 +5,8 @@ import { FooterData } from "../../../utils/OurServiceData";
 import Link from "next/link";
 function Footer() {
   return (
-    <footer className={styles.footer}>
-      <div className="grid grid-cols-4 gap-5">
+    <footer className={`${styles.footer}`}>
+      <div className={`grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 md:mb-16 mb-0`}>
         <div className="">
           <div className="relative w-[120px] h-[70px] mb-3">
             <Image src="/images/3pcon_logo.svg" alt="3pcon image" fill />
@@ -51,7 +51,7 @@ function Footer() {
         </div>
         <div className=""></div>
       </div>
-      <div className="flex justify-between">
+      <div className="flex justify-between flex-col sm:flex-row items-center gap-4">
         <div className="flex gap-2 items-center">
           <Image src="/images/solution/copyright.svg" alt="" width={16} height={16} />
           All Copyright 2025 by 3PCON

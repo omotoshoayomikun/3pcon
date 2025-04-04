@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Input, TextArea } from "../Form/Input/Input";
 import { Button } from "../Form/Button/Button";
+import styles from "./ContactUs.module.css"
 import Image from "next/image";
 
 function ContactUs() {
@@ -61,17 +62,17 @@ function ContactUs() {
   ];
 
   return (
-    <div className="flex px-16 py-[80px] gap-8 items-center">
-      <div className="flex-1">
+    <section className={styles.contact_container}>
+      <div className="flex-1 self-center">
         <div className="special-text mb-2">CONTACT US</div>
-        <h2 className=" text-[30px] font-bold">
+        <h2 className=" text-heading">
           We are here to partner with you
         </h2>
         <p className="mb-10">
           schedule your business planning appointment today.
         </p>
         <div>
-          <div className="grid grid-cols-2 gap-5">
+          <div className="grid grid-cols-2 md:gap-5 gap-3">
             {InputDetail.map((input, index) => (
               <Input
                 key={index}
@@ -81,20 +82,20 @@ function ContactUs() {
               />
             ))}
           </div>
-          <div className="mt-5">
+          <div className="md:mt-5 mt-3">
           <TextArea placeholder="Message" value={value.message} handleChange={handleChange} />
           </div>
-          <div className="mt-5">
+          <div className="md:mt-5 mt-3">
             <Button title="Send Message"  icon={"/images/arrow.svg"} btnStyle={{width: "100%", justifyContent: "center"}} />
           </div>
         </div>
       </div>
       <div className="flex-1">
-        <div className="relative w-full h-[620px]">
+        <div className={styles.image_container}>
           <Image src="/images/solution/lady2.png" alt="" fill objectFit="contain" />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

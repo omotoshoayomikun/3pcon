@@ -23,7 +23,7 @@
 
 @media (width <= 500px) {
   .container {
-    height: 180px;
+    height: 40vh;
   }
 }
 
