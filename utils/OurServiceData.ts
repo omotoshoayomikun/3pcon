@@ -8,7 +8,13 @@ export const OurServiceData = [
     showText: {
       icon: "/images/solution/sd.png",
       text: "Software Development",
-      list: ["Software Product Development", "UX/ UI Design", "UX/ UI Review & Improvement", "Mobile App Development", "Microsoft O365 Development"],
+      list: [
+        "Software Product Development",
+        "UX/ UI Design",
+        "UX/ UI Review & Improvement",
+        "Mobile App Development",
+        "Microsoft O365 Development",
+      ],
     },
   },
   {
@@ -20,7 +26,11 @@ export const OurServiceData = [
     showText: {
       icon: "/images/solution/da.png",
       text: "Data & Automation",
-      list: ["Business Intelligence & Data Analytics", "Business Process/ Workflow Automation", "Robotics & Artificial Intelligence"],
+      list: [
+        "Business Intelligence & Data Analytics",
+        "Business Process/ Workflow Automation",
+        "Robotics & Artificial Intelligence",
+      ],
     },
   },
   {
@@ -32,7 +42,13 @@ export const OurServiceData = [
     showText: {
       icon: "/images/solution/ad.png",
       text: "Agile/ Digital Transformation",
-      list: ["Agile Consultancy – Business Transformation", "Agile Teams – Technology", "Training", "Business Analysis", "Product Delivery & Change Management"],
+      list: [
+        "Agile Consultancy – Business Transformation",
+        "Agile Teams – Technology",
+        "Training",
+        "Business Analysis",
+        "Product Delivery & Change Management",
+      ],
     },
   },
   {
@@ -44,7 +60,12 @@ export const OurServiceData = [
     showText: {
       icon: "/images/solution/ca.png",
       text: "Consultancy & Advisory",
-      list: ["Internal Innovation Hub", "B2Business Partnership", "B2Government Partnership", "Technology Incubation"],
+      list: [
+        "Internal Innovation Hub",
+        "B2Business Partnership",
+        "B2Government Partnership",
+        "Technology Incubation",
+      ],
     },
   },
   {
@@ -56,7 +77,12 @@ export const OurServiceData = [
     showText: {
       icon: "/images/solution/sdd.png",
       text: "Innovation Management",
-      list: ["Internal Innovation Hub", "B2Business Partnership", "B2Government Partnership", "Technology Incubation"],
+      list: [
+        "Internal Innovation Hub",
+        "B2Business Partnership",
+        "B2Government Partnership",
+        "Technology Incubation",
+      ],
     },
   },
   {
@@ -68,7 +94,13 @@ export const OurServiceData = [
     showText: {
       icon: "/images/solution/mw.png",
       text: "Managed Workforce/IT Workforce",
-      list: ["Agile Teams/ Coaches", "Business Analysts", "Data Analysts", "Software Developers", "IT Engineers & End User Support"],
+      list: [
+        "Agile Teams/ Coaches",
+        "Business Analysts",
+        "Data Analysts",
+        "Software Developers",
+        "IT Engineers & End User Support",
+      ],
     },
   },
 ];
@@ -131,4 +163,82 @@ export const WhyData = [
   "Personalized approach to client engagement and solution delivery.",
   "Proven track record of successful project implementations and client satisfaction.",
   "Forward-thinking mindset, constantly adapting to emerging technologies and market trends.",
+];
+
+export const SoftwareDevData = [
+  {
+    image: "/images/solution/man1.png",
+    title: "Software Product Development",
+    des: `
+    We help businesses transform ideas into successful software products. From concept to deployment, 
+    our development services ensure a scalable, high-quality solution tailored to your needs.
+    `,
+    listTitle: "Benefits With Our Service",
+    list: [
+      "Requirements Analysis – Define goals, features, and technical needs.",
+      "Architecture & Prototyping – Design a solid foundation for development.",
+      "Development & Testing – Build, refine, and ensure performance.",
+      "Continuous Improvement – Adapt and scale as your business grows."
+    ]
+  },
+  {
+    image: "/images/solution/xc1.png",
+    title: "UX/UI Design Services: Creating Intuitive and Engaging Digital Experiences",
+    des: `
+    A well-designed user experience is essential for software adoption and 
+    customer satisfaction. Our UX/UI design services focus on crafting intuitive, 
+    visually appealing, and user-centered interfaces 
+    that align with your business goals and enhance usability.
+    `,
+    listTitle: "What We Offer:",
+    list: [
+      "User Research & Personas",
+      "UX Strategy & Planning",
+      "Visual Design & Branding",
+      "Usability Testing & Iteration"
+    ]
+  },
+  {
+    image: "/images/solution/paper.png",
+    title: "UX/UI Review & Improvement",
+    des: `
+    If your software isn’t meeting user expectations, we identify problem areas and implement data-driven design improvements.
+    `,
+    listTitle: "Our Approach:",
+    list: [
+      "Heuristic Evaluation & Usability Testing – Detect usability issues.",
+      "User Feedback Analysis – Gather insights to guide improvements.",
+      "Design Enhancements & Implementation – Optimize user experience.",
+      "Ongoing UX Optimization – Keep your product evolving with user needs."
+    ]
+  },
+  {
+    image: "/images/solution/paper2.png",
+    title: "Mobile App Development",
+    des: `
+    We design and develop mobile apps that are fast, secure, and scalable. Our mobile app development services include.
+    `,
+    listTitle: "Our Approach:",
+    list: [
+      "Native app development for iOS and Android",
+      "Cross-platform app development",
+      "Mobile app design and prototyping",
+      "Testing and deployment",
+      "Ongoing maintenance and updates",
+    ]
+  },
+  {
+    image: "/images/solution/paper3.png",
+    title: "Microsoft O365 Development",
+    des: `
+    We specialize in developing custom solutions on the Microsoft O365 platform. Our services include:
+    `,
+    listTitle: "Our Approach:",
+    list: [
+      "Custom application development for productivity & automation",
+      "User feedback analysis and reporting",
+      "Microsoft Teams integration and development",
+      "Power BI and Power Apps development",
+    ]
+  },
 ];

@@ -47,7 +47,7 @@ function Hero() {
   }, []);
 
   return (
-    <div>
+    <section className="w-full overflow-x-hidden">
       <div
         className={`${styles.hero}`}
         style={{ transform: `translateX(-${currentIndex * 100}vw)` }}
@@ -80,7 +80,7 @@ function Hero() {
           ></div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

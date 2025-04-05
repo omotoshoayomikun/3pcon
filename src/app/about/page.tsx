@@ -77,8 +77,8 @@ function page() {
         </h2>
         <div className="flex gap-6">
           <div className="flex-1">
-            <div className="relative w-full h-full">
-              <Image src="/images/solution/man2.png" alt="" fill objectFit="contain" /> 
+            <div className="relative">
+              <Image src="/images/solution/man2.png" alt="" fill /> 
             </div>
           </div>
           <div className="flex-[1.7]">
