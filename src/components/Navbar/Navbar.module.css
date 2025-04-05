@@ -25,26 +25,94 @@
   position: relative;
 }
 
-.handbuger {
+.hamburger {
   display: none;
 }
 
 @media (width <= 666px) {
   .nav_link {
-    display: none;
-    position: absolute;
+    position: fixed;
+    width: 220px;
+    height: calc(100dvh - var(--fixed-h-value));
+    background: url("../../../public/images/hero2.png") 0 100%,
+      linear-gradient(238.12deg, #09224e 39.46%, #0e429f 136.78%);
+    background-size: 100%;
+    mix-blend-mode: soft-light;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    right: -220px;
+    top: var(--fixed-h-value);
+    border-left: 1px solid #4586c2;
+    gap: 0;
+    transition: 0.9s ease-in-out;
   }
 
-  .handbuger {
+  .nav_link li {
+    /* padding: 10px 10px; */
+    width: 100%;
+    /* text-align: center; */
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    /* border-bottom: 1px solid #4586c2; */
+  }
+
+  .nav_link li a {
     display: block;
-    width: 32px;
-    height: 4px;
-    background-color: white;
-    border-radius: 10px;
-    position: relative;
+    padding: 10px 10px;
   }
 
-  .handbuger::before {
+  .nav_link li a:hover {
+    background-color: #4586c2;
+    color: #fff;
+  }
+
+  .hamburger {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    /* background-color: red; */
+    min-width: 35px;
+    min-height: 23px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .hamburger .bar:first-child, .hamburger .bar:nth-child(2) {
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    background-color: white;
+    display: block;
+  }
+  
+  .hamburger .bar:last-child {
+    width: 75%;
+    height: 4px;
+    border-radius: 10px;
+    background-color: white;
+    margin-left: auto;
+    display: block;
+  }
+
+  .hamburger.open .bar:last-child {
+    display: none;
+  }
+
+  .hamburger.open .bar:first-child {
+   rotate: 45deg;
+   position: absolute;
+   top: 50%;
+
+
+  }
+  .hamburger.open .bar:nth-child(2) {
+   rotate: -45deg;
+   position: absolute;
+   top: 50%;
+  }
+/* 
+  .hamburger::before {
     content: "";
     position: absolute;
     width: 32px;
@@ -52,8 +120,8 @@
     background-color: white;
     border-radius: 10px;
     top: -7px;
-  }
-  .handbuger::after {
+  } */
+  /* .hamburger::after {
     content: "";
     position: absolute;
     width: 18px;
@@ -61,6 +129,10 @@
     background-color: white;
     border-radius: 10px;
     top: 7px;
+    right: 0;
+  } */
+
+  .nav_link.open {
     right: 0;
   }
 }

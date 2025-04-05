@@ -16,7 +16,7 @@ function SharedHero({
 }) {
   return (
     <div className={styles.container}>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center z-10">
         <h1 className="text-2xl md:text-5xl font-bold mb-2">{headerText}</h1>
         <div className="flex text-[14px] gap-2 items-center">
           <Link href="/">HOME</Link>

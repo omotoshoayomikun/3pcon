@@ -1,14 +1,20 @@
 "use client"
+
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Navbar.module.css"
 import { NavLinks } from "../../../utils/Links";
 import { usePathname } from "next/navigation";
 
 function Navbar() {
     const pathName = usePathname();
-    console.log(pathName)
+    const [sidebarOpen, setSidebarOpen] = useState(false);
+    
+    const handleSidebar = () => {
+      setSidebarOpen((prev) => !prev);
+      console.log("setSidebarOpen")
+    }
 
   return (
     <header className={` ${styles.nav_container} ${pathName == "/"? "nav-bg-home" : "nav-bg-shared"}`}>
@@ -17,9 +23,13 @@ function Navbar() {
       </Link>
       <nav>
         {/* THIS IS FOR SMALLER SCREEN HANDBUGER */}
-        <div className={styles.handbuger}></div>
+         <div className={`${styles.hamburger} ${sidebarOpen ? styles.open: ""}`} onClick={handleSidebar}>
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
+        </div>
         {/* ------------------------------------ */}
-      <ul className={`${styles.nav_link}`}>
+      <ul className={`${styles.nav_link} ${sidebarOpen ? styles.open: ""}`}>
         {
             NavLinks.map((link, index) => (
               <li key={index}>
