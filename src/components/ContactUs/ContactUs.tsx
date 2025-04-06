@@ -19,6 +19,10 @@ function ContactUs() {
     setValue({ ...value, [e.target.name]: e.target.value });
   };
 
+  const handSendMessage = () => {
+    
+  }
+
   const InputDetail: Array<{
     label: string;
     name: keyof typeof value;
@@ -86,7 +90,7 @@ function ContactUs() {
           <TextArea placeholder="Message" value={value.message} handleChange={handleChange} />
           </div>
           <div className="md:mt-5 mt-3">
-            <Button title="Send Message"  icon={"/images/arrow.svg"} btnStyle={{width: "100%", justifyContent: "center"}} />
+            <Button title="Send Message"  icon={"/images/arrow.svg"} btnStyle={{width: "100%", justifyContent: "center"}} handleClick={handSendMessage} />
           </div>
         </div>
       </div>

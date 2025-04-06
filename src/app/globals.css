@@ -63,7 +63,7 @@ background: var(--auternative-bg-dark-blue);
 }
 
 
-@media (width <= 666px) {
+@media (width <= 667px) {
   :root {
     --fixed-h-value: 60px;
   }

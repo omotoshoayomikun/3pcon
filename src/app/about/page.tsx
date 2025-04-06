@@ -10,7 +10,7 @@ import { useRouter } from "next/navigation";
 
 import styles from "./About.module.css"
 
-function page() {
+function Page() {
   const router = useRouter();
   const NavInfo = [
     {
@@ -110,4 +110,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
