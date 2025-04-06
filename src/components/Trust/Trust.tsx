@@ -1,9 +1,18 @@
+"use client"
+
 import Image from "next/image";
 import React from "react";
 import { Button } from "../Form/Button/Button";
 import styles from "./Trust.module.css";
+import { useRouter } from "next/navigation";
 
 function Trust() {
+  const router = useRouter()
+  const handleAbout = () => {
+    router.push("/about")
+  }
+
+
   return (
     <section className={`${styles.trust_container}`}>
       <div className="flex-1">
@@ -23,7 +32,7 @@ function Trust() {
           through the intelligent application of tech and digital for
           pacesetting advantage & sustained prosperity.
         </p>
-        <Button title="Read More" icon={"/images/arrow.svg"} />
+        <Button title="Read More" icon={"/images/arrow.svg"} handleClick={handleAbout} />
 
         <div className={`${styles.flex_float}`}>
           <div className="flex items-center gap-3">

@@ -4,11 +4,16 @@ import Image from "next/image";
 import React from "react";
 import { OurValuesData } from "../../../utils/OurServiceData";
 import { Button } from "../Form/Button/Button";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import styles from "./OurValues.module.css"
 
 function OurValues() {
+  const router = useRouter();
    const pathName = usePathname();
+
+   const handleContact = () => {
+    router.push("/contact")
+   }
   return (
     <section className={`bg-[#ECE9CC] px-[var(--shared-px)]  ${pathName !== "/" ? "py-[var(--shared-py)]" : "py-[80px]"} w-full relative ${styles.container}`}>
       {/*  */}
@@ -28,6 +33,7 @@ function OurValues() {
               color: "var(--bg-dark-blue)",
             }}
             iconStyle={{ color: "var(--bg-dark-blue)" }}
+            handleClick={handleContact}
           />
         </div>
       </div>

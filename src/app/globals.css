@@ -2,6 +2,8 @@
 
 * {
   box-sizing: border-box;
+  scroll-padding: var(--fixed-h-value);
+  scroll-behavior: smooth;
 }
 
 body {

@@ -1,17 +1,27 @@
+"use client"
+
 import { Button } from "@/components/Form/Button/Button";
 import SharedHero from "@/components/Hero/SharedHero/SharedHero";
 import React from "react";
 import { AboutData, WhyData } from "../../../utils/OurServiceData";
 import OurValues from "@/components/OurValues/OurValues";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+
+import styles from "./About.module.css"
 
 function page() {
+  const router = useRouter();
   const NavInfo = [
     {
      title: "ABOUT US",
      url: "/about",
    }
  ]
+
+ const handleAbout = () => {
+  router.push("/service")
+ }
 
   return (
     <div className="mt-[var(--fixed-h-value)]">
@@ -39,7 +49,7 @@ function page() {
             customer-centric approach, we help businesses achieve both their
             operational and strategic objectives.
           </p>
-          <Button title="Expore more" icon={"/images/arrow.svg"} />
+          <Button title="Expore more" icon={"/images/arrow.svg"} handleClick={handleAbout} />
         </div>
         <div className="flex-1">
           <div className="relative w-full h-[450px]">
@@ -75,15 +85,15 @@ function page() {
         <h2 className="mb-7 text-[35px] font-extrabold leading-10 text-center">
           Why 3PCON?
         </h2>
-        <div className="flex gap-6">
+        <div className={styles.why}>
           <div className="flex-1">
-            <div className="relative">
-              <Image src="/images/solution/man2.png" alt="" fill /> 
+            <div className={styles.why_img}>
+              <Image src="/images/solution/man2.png" alt="" fill objectFit="contain" /> 
             </div>
           </div>
           <div className="flex-[1.7]">
             {WhyData.map((value, index) => (
-              <div className="flex gap-3 mb-5 bg-[#EEF7FF] p-4" key={index}>
+              <div className="flex gap-2 mb-3 bg-[#EEF7FF] p-4" key={index}>
                 <Image
                   src="/images/solution/checked.svg"
                   alt=""

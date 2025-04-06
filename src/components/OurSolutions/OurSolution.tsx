@@ -6,7 +6,7 @@ import Link from "next/link";
 
 function OurSolutions() {
   return (
-    <section className="px-[var(--shared-px)] py-[var(--shared-py)]">
+    <section id="main-content" className="px-[var(--shared-px)] py-[var(--shared-py)]">
       <div className="special-text">OUR SERVICES</div>
       <h2 className="text-heading mb-5">We Deliver The Best Solution</h2>
       <div className={`md:mx-0 ${styles.card_container}`}>
@@ -34,12 +34,12 @@ function OurSolutions() {
                       <li key={index} className="text-white">{item}</li>
                     ))}
                   </ul>
-                  <div className="mt-auto">
-                  <Link href={service.url} className="flex items-center font-bold text-[18px] text-white gap-2.5 mx-auto w-[max-content]">
+                  {/* <div className="mt-auto"> */}
+                  <Link href={service.url} className={styles.more_link}>
                   Read More 
                   <Image src="/images/arrow.svg" width={16} height={16} alt="" />
                   </Link>
-                  </div>
+                  {/* </div> */}
               </div>
               <div className={styles.img_txt}></div>
             </div>

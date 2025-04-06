@@ -1,0 +1,25 @@
+.why {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.why_img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+@media (width <= 1000px) {
+  .why {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .why_img {
+    width: 100%;
+    height: 400px;
+    position: relative;
+  }
+}

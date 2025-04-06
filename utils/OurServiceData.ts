@@ -130,17 +130,17 @@ export const OurValuesData = [
 
 export const FooterData = {
   section2: [
-    { title: "Software Development", link: "" },
-    { title: "Data & Automation", link: "" },
-    { title: "Agile/ Digital Transformation", link: "" },
-    { title: "Consultancy & Advisory", link: "" },
-    { title: "Innovation Management", link: "" },
-    { title: "Managed Workforce/ IT Workforce", link: "" },
+    { title: "Software Development", link: "/service/software-development" },
+    { title: "Data & Automation", link: "/service/data-automation" },
+    { title: "Agile/ Digital Transformation", link: "/service/agile" },
+    { title: "Consultancy & Advisory", link: "/service/consultancy" },
+    { title: "Innovation Management", link: "/service/innovation" },
+    { title: "Managed Workforce/ IT Workforce", link: "/service/it-workforce" },
   ],
   section3: [
-    { title: "About 3PCON", link: "" },
-    { title: "Our Services", link: "" },
-    { title: "Contact Us", link: "" },
+    { title: "About 3PCON", link: "/about" },
+    { title: "Our Services", link: "/service" },
+    { title: "Contact Us", link: "/contact" },
   ],
 };
 

@@ -6,10 +6,10 @@ import { SoftwareDevData } from "../../../../utils/OurServiceData";
 
 function page() {
   const NavInfo = [
-    {
-      title: "Service",
-      url: "/service",
-    },
+    // {
+    //   title: "Service",
+    //   url: "/service",
+    // },
     {
       title: "Software Development",
       url: "/software-development",
