@@ -94,7 +94,7 @@ function ContactUs() {
           </div>
         </div>
       </div>
-      <div className="flex-1">
+      <div className="flex-1 align-middle">
         <div className={styles.image_container}>
           <Image src="/images/solution/lady2.png" alt="" fill objectFit="contain" />
         </div>
