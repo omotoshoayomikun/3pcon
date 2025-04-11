@@ -110,7 +110,7 @@
   pointer-events: auto;
 }
 
-@media (width <= 870px) {
+@media (width <= 890px) {
   .card_container {
     grid-template-columns: repeat(2, 1fr);
   }

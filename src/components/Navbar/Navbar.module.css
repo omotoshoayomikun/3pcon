@@ -169,8 +169,8 @@
     position: fixed;
     left: 0;
     width: calc(100%);
-    height: calc(100dvh - var(--fixed-h-value));
-    top: var(--fixed-h-value);
+    height: calc(100dvh);
+    top: 0;
     background-color: #6969696c;
     z-index: 10 !important;
   }

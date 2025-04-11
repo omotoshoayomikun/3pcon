@@ -77,7 +77,7 @@ function Navbar() {
               </Link>
             </div>
             <div className="mb-2">
-              <Link href="">
+              <Link href="mailto:example@gmail.com">
                 <div className="flex items-center gap-2 text-white">
                   <Image src="/images/solution/blue-fly.png" alt="" width={24} height={24} />
                   <span className="font-bold">example@gmail.com</span>
@@ -85,7 +85,7 @@ function Navbar() {
               </Link>  
             </div>
             <div className="">
-              <Link href="">
+              <Link href="tel:080757668384">
                 <div className="flex items-center gap-2 text-white">
                   <Image src="/images/solution/blue-phone.png" alt="" width={24} height={24} />
                   <span className="font-bold">080757668384</span>
