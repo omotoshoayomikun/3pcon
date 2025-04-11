@@ -67,7 +67,7 @@ function ContactUs() {
 
   return (
     <section className={styles.contact_container}>
-      <div className="flex-1 self-center">
+      <div className="flex-1 w-full">
         <div className="special-text mb-2">CONTACT US</div>
         <h2 className=" text-heading">
           We are here to partner with you
