@@ -1,5 +1,7 @@
 import SharedHero from '@/components/Hero/SharedHero/SharedHero';
+import ServiceContent from '@/components/Service/ServiceContent';
 import React from 'react'
+import { DataAutomationData } from '../../../../utils/OurServiceData';
 
 function page() {
     const NavInfo = [
@@ -15,6 +17,7 @@ function page() {
     return (
       <div className="mt-[var(--fixed-h-value)]">
         <SharedHero value={NavInfo} headerText="Data & Automation" />
+        <ServiceContent datas={DataAutomationData} />
       </div>
     );
 }
