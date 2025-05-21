@@ -34,7 +34,7 @@ function Footer() {
                 height={24}
               />
             </Link>
-            <Link href="">
+            <Link href="https://www.linkedin.com/company/94791400/admin/dashboard/">
               <Image
                 src="/images/solution/linkedin.png"
                 alt=""

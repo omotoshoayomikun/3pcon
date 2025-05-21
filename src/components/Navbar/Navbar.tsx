@@ -50,19 +50,29 @@ function Navbar() {
               </div>
             </div>
           <ul>
-            {NavLinks.map((link, index) => (
+            {NavLinks.map((link, index) => {
+              let checkURL = ""
+              if(pathName.includes("service")) {
+                checkURL = "/service"
+              } else {
+                checkURL = pathName
+              }
+
+              return (
               <li key={index}>
                 <Link
                   href={link.url}
                   onClick={() => setSidebarOpen(false)}
                   className={`${
-                    pathName == link.url ? "text-[#4AD3D5]" : "text-white"
+                    checkURL == link.url ? "text-[#4AD3D5]" : "text-white"
                   }`}
                 >
                   {link.title}
                 </Link>
               </li>
-            ))}
+              )
+            }
+            )}
           </ul>
           <div className={styles.sm_contact}>
             <div className="flex gap-10 mb-5">
@@ -72,23 +82,31 @@ function Navbar() {
               <Link href="">
                 <Image src="/images/solution/blue-twitter.png" alt="" width={27} height={27} />
               </Link>
-              <Link href="">
+              <Link href="https://www.linkedin.com/company/94791400/admin/dashboard/">
                 <Image src="/images/solution/blue-linkedin.png" alt="" width={27} height={27} />
               </Link>
             </div>
             <div className="mb-2">
-              <Link href="mailto:example@gmail.com">
+              <Link href="mailto:3PCONtech@gmail.com">
                 <div className="flex items-center gap-2 text-white">
                   <Image src="/images/solution/blue-fly.png" alt="" width={24} height={24} />
-                  <span className="font-bold">example@gmail.com</span>
+                  <span className="font-bold">3PCONtech@gmail.com</span>
                 </div>
               </Link>  
             </div>
             <div className="">
-              <Link href="tel:080757668384">
+              <Link href="tel:09060000278">
                 <div className="flex items-center gap-2 text-white">
                   <Image src="/images/solution/blue-phone.png" alt="" width={24} height={24} />
-                  <span className="font-bold">080757668384</span>
+                  <span className="font-bold">09060000278</span>
+                </div>
+              </Link>  
+            </div>
+            <div className="">
+              <Link href="tel:09083511770">
+                <div className="flex items-center gap-2 text-white">
+                  <Image src="/images/solution/blue-phone.png" alt="" width={24} height={24} />
+                  <span className="font-bold">09083511770</span>
                 </div>
               </Link>  
             </div>

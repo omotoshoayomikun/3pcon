@@ -22,8 +22,14 @@ import Footer from "@/components/Footer/Footer";
 const urbanist = Urbanist({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata = {
-  title: "3PCON - IT COMPANY",
-  description: "3PCON is a dynamic tech and digital startup with the vision of helping businesses and government organisations become more agile and nimble, responding to the fast-changing environment and customer needs, through the intelligent application of tech and digital for pacesetting advantage & sustained prosperity.",
+  title: {
+    default: "3PCON IT COMPANY",
+    template: "%s - 3PCON IT Company"
+  },
+  description: "Welcome to 3PCON! A dynamic tech and digital startup with the vision of helping businesses and government organisations become more agile and nimble, responding to the fast-changing environment and customer needs, through the intelligent application of tech and digital for pacesetting advantage & sustained prosperity.",
+  twitter: {
+    card: "summary_large_image"
+  }
 };
 
 export default function RootLayout({

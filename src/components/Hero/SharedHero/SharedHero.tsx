@@ -28,7 +28,7 @@ function SharedHero({
           />
           {value.map((val, index) => (
             <div key={index} className="flex items-center gap-2">
-              <Link href={val.url} className={` ${value.length == index + 1 ? "text-[#41CFD2]" : "text-white"} `}>
+              <Link href={val.url} className={` ${value.length == index + 1 ? "text-[#41CFD2]" : "text-white"} text-uppercase`}>
                 {val.title}
               </Link>
               {value.length !== index + 1 && (

@@ -5,9 +5,12 @@ import { Input, TextArea } from "../Form/Input/Input";
 import { Button } from "../Form/Button/Button";
 import styles from "./ContactUs.module.css"
 import Image from "next/image";
+import { valueInterface } from "../../../utils/types";
+import { SendMessage } from "../../../utils/Action";
+
 
 function ContactUs() {
-  const [value, setValue] = useState({
+  const [value, setValue] = useState<valueInterface>({
     name: "",
     email: "",
     phone: "",
@@ -15,12 +18,30 @@ function ContactUs() {
     message: "",
   });
 
+  const [loading, setLoading] = useState(false)
+
+  // const [err, setError] = useState({
+  //   name: false,
+  //   email: false,
+  //   phone: false,
+  //   subject: false,
+  //   message: false,
+  // })
+
   const handleChange = (e: { target: { name: string; value: string } }) => {
     setValue({ ...value, [e.target.name]: e.target.value });
   };
 
-  const handSendMessage = () => {
-    
+  const handleSendMessage = async() => {
+    try {
+      setLoading(true)
+      const response = await SendMessage(`api/send-message`, value)
+      console.log(response)
+    } catch (err:unknown) {
+      console.log(err)
+    } finally {
+      setLoading(false)
+    }
   }
 
   const InputDetail: Array<{
@@ -87,10 +108,10 @@ function ContactUs() {
             ))}
           </div>
           <div className="md:mt-5 mt-3">
-          <TextArea placeholder="Message" value={value.message} handleChange={handleChange} />
+          <TextArea placeholder="Message" name="message" value={value.message} handleChange={handleChange} />
           </div>
           <div className="md:mt-5 mt-3">
-            <Button title="Send Message"  icon={"/images/arrow.svg"} btnStyle={{width: "100%", justifyContent: "center"}} handleClick={handSendMessage} />
+            <Button title="Send Message"  icon={"/images/arrow.svg"} btnStyle={{width: "100%", justifyContent: "center"}} disabled={loading} handleClick={handleSendMessage} />
           </div>
         </div>
       </div>
