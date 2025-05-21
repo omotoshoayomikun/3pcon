@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   description: "Welcome to 3PCON! A dynamic tech and digital startup with the vision of helping businesses and government organisations become more agile and nimble, responding to the fast-changing environment and customer needs, through the intelligent application of tech and digital for pacesetting advantage & sustained prosperity.",
   twitter: {
     card: "summary_large_image"
-  }
+  },
+  
 };
 
 export default function RootLayout({
