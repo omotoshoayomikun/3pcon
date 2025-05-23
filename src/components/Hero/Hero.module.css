@@ -22,9 +22,10 @@
   overflow: hidden;
   margin: 0;
   background: url("../../../public/images/hero.png") 0 100%,
-    linear-gradient(-120deg, #09224e 0%, #41cfd2 130%);
+    linear-gradient(247.97deg, #09224E 18.53%, #41cfd2 137.6%);
   background-size: contain;
   background-repeat: no-repeat;
+  mix-blend-mode: soft-light;
 }
 
 .side {

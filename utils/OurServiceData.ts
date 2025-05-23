@@ -56,7 +56,7 @@ export const OurServiceData = [
     img_text: "",
     title: "Consultancy & Advisory",
     icon: "/images/solution/x4.svg",
-    url: "/service/consultancy",
+    url: "/service/consultancy-advisory",
     showText: {
       icon: "/images/solution/ca.png",
       text: "Consultancy & Advisory",
@@ -133,7 +133,7 @@ export const FooterData = {
     { title: "Software Development", link: "/service/software-development" },
     { title: "Data & Automation", link: "/service/data-automation" },
     { title: "Agile/ Digital Transformation", link: "/service/agile" },
-    { title: "Consultancy & Advisory", link: "/service/consultancy" },
+    { title: "Consultancy & Advisory", link: "/service/consultancy-advisory" },
     { title: "Innovation Management", link: "/service/innovation" },
     { title: "Managed Workforce/ IT Workforce", link: "/service/it-workforce" },
   ],

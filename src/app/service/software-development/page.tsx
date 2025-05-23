@@ -7,7 +7,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Software Development",
-  description: "3PCON IT company help businesses transform ideas into successful software products. From concept to deployment, our development services ensure a scalable, high-quality solution tailored to your needs"
+  description: "Help businesses transform ideas into successful software products. From concept to deployment, our development services ensure a scalable, high-quality solution tailored to your needs"
 }
 
 function page() {

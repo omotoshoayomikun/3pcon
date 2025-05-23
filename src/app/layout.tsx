@@ -3,6 +3,7 @@ import { Urbanist } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
+import { ToastContainer } from "react-toastify";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -30,6 +31,11 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image"
   },
+  keywords: ["3pcon", "application development", "software engineering", "full-stack development", "backend development", "frontend development", "Data", "Data and Automation", "Agile", "Digital Transformation", "Consultancy", "Advisory", "Innovation Management", "/IT Workforce", "Managed Workforce", "artificial intelligence", "machine learning", "network security", "Google Cloud", "cloud computing", "iOS development", "Android development", "cross-platform apps", "React Native", "Flutter", "IT company", "IT company in Nigeria", "IT company in lagos", "Best Tech company in Nigeria", "Tech Company"],
+  metadataBase: new URL("https://3pcon.com"),
+  openGraph: {
+    images: "/opengraph-image.png"
+  }
   
 };
 
@@ -47,6 +53,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <ToastContainer />
       </body>
     </html>
   );

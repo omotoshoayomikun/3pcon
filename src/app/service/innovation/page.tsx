@@ -8,7 +8,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Innovation Management",
-  description: "3PCON IT company Innovation Hub is a collaborative space where businesses, startups, and experts come together to drive innovation"
+  description: "3PCON IT company provide an Innovation Hub with a collaborative space where businesses, startups, and experts come together to drive innovation"
 }
 
 function page() {

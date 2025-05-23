@@ -39,7 +39,7 @@ function OurValues() {
       </div>
       {/*  */}
       <div className="relative z-[1]">
-      <h1 className="text-[40px] font-extrabold text-center ">Our Values</h1>
+      <h1 className="text-heading my-4 text-center ">Our Values</h1>
       <p className="text-center mb-10">
         We are guided by our core Values of Customer Centricity, Courage,
         Respect and Collaboration

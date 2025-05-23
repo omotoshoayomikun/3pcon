@@ -26,8 +26,8 @@ function Navbar() {
           pathName == "/" ? "nav-bg-home" : "nav-bg-shared"
         }`}
       >
-        <Link href="/" className="relative w-[90px] h-full sm:w-[120px]">
-          <Image src="/images/3pcon_logo.svg" alt="3pcon image" fill objectFit="cover" />
+        <Link href="/" className={styles.logo}>
+          <Image src="/images/3pcon_logo.svg" alt="3pcon image" fill objectFit="contain" />
         </Link>
         <nav>
           {/* THIS IS FOR SMALLER SCREEN HANDBUGER */}

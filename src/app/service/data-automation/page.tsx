@@ -8,7 +8,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Data & Automation",
-  description: "3PCON IT company unlock the full potential of your data with our Business Intelligence & Data Analytics services"
+  description: "Unlock the full potential of your data with our Business Intelligence & Data Analytics services"
 }
 
 function page() {

@@ -33,13 +33,14 @@ background: var(--auternative-bg-dark-blue);
   color: var(--bg-dark-blue);
   position: relative;
   width: max-content;
-  margin-bottom: 0px;
+  margin-bottom: 17px;
+  font-size: 1.1rem;
 }
 
 .text-heading {
-  font-size: 1.8rem;
-  font-weight: bold;
-  line-height: 2rem;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  line-height: 2.7rem;
 }
 
 .special-text::before {
@@ -50,7 +51,7 @@ background: var(--auternative-bg-dark-blue);
   background-color: var(--bg-dark-lightblue);
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  bottom: 0px;
+  bottom: -1px;
   right: 0;
 }
 

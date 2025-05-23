@@ -10,6 +10,32 @@
   position: relative;
 }
 
+.about_container {
+  background-color: #F1FFFF;
+  display: grid;
+}
+
+.about_body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: #212C62;
+  color: white;
+  border-radius: 15px;
+  padding: 32px;
+}
+
+.about_image {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  transition: all 0.5s;
+}
+
+.about_body:hover .about_image {
+  transform: scale(1.4);
+}
+
 @media (width <= 1000px) {
   .why {
     display: flex;

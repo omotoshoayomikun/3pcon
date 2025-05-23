@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-const baseUrl = process.env.BASEURL;
+const baseUrl = process.env.NEXT_PUBLIC_BASEURL;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     return [
@@ -35,7 +35,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             changeFrequency: "yearly"
         },
         {
-            url: `${baseUrl}/service/consultancy`,
+            url: `${baseUrl}/service/consultancy-advisory`,
             priority: 0.9,
             lastModified: new Date(),
             changeFrequency: "yearly"

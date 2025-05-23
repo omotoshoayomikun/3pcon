@@ -43,22 +43,10 @@
 }
 
 
-.value_card:hover .value_card_box {
-    /* background: linear-gradient(137.61deg, #09224E 95.17%, #000000 95.17%); */
+.value_card:hover {
     color: white;
-    /* animation: xxx 0.9s cubic-bezier(0.25, 1.5, 0.5, 1); */
+    border-radius: 0;
 }
-/* 
-@keyframes xxx {
-    from {
-        background: linear-gradient(137.61deg, #09224E 95.17%, #000000 95.17%);
-    }
-    to {
-      background: transparent;
-    }
-    
-} */
-
 
 
 .clip {
@@ -94,13 +82,15 @@
 }
 
 .value_card:hover .clip::after {
-    clip-path: circle(70% at 50% 50%);
+    clip-path: circle(75% at 50% 50%);
     opacity: 1;
+    border-radius: 0px;
 }
 
 .value_card:hover .clip {
     /* clip-path: circle(70% at 50% 50%); */
     opacity: 1;
+    border-radius: 0px;
 }
 
 /* @keyframes clip-path {

@@ -2,7 +2,8 @@
   "name": "3pcon",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
+  "homepage": "https://3pcon.com",
+   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

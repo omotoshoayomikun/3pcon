@@ -58,13 +58,13 @@ function About() {
         </div>
       </div>
     </div>
-    <div className="bg-[#F1FFFF] grid md:grid-cols-2 grid-cols-1 gap-8 px-[var(--shared-px)] py-16">
+    <div className={`bg-[#F1FFFF] grid md:grid-cols-2 grid-cols-1 gap-8 px-[var(--shared-px)] py-16 ${styles.about_container}`}>
       {AboutData.map((data, index) => (
         <div
           key={index}
-          className="flex flex-col gap-6 bg-[#212C62] text-white rounded-[15px] px-8 py-8"
+          className={`${styles.about_body}`}
         >
-          <div className="relative w-[60px] h-[60px]">
+          <div className={`${styles.about_image}`}>
             <Image
               src={data.icon}
               alt="icon image"

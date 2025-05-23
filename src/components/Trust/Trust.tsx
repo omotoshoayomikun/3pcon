@@ -16,14 +16,14 @@ function Trust() {
   return (
     <section className={`${styles.trust_container}`}>
       <div className="flex-1">
-        <div className="flex items-end">
-          <div className="relative w-[100px] h-[100px]">
+        <div className="flex items-end mb-8">
+          <div className="relative w-[80px] h-[80px]">
             <Image src="/images/logo_2.svg" alt="logo image" fill />
           </div>
-          <div className="special-text">ABOUT 3PCON</div>
+          <div className="special-text" style={{marginBottom: "0px"}}>ABOUT 3PCON</div>
         </div>
         <h1 className="text-heading">
-          Your Trusted Partner for Tech-Driven Success
+          Your Trusted Partner <br /> for Tech-Driven Success
         </h1>
         <p className=" my-5">
           A dynamic tech and digital startup with the vision of helping

@@ -22,7 +22,7 @@ export const TextArea: FC<InputProps> = ({ handleChange, ...props }) => {
     return (
         <div>
             <textarea
-                className="w-full px-5 py-4 border-[1px] border-solid border-[rgba(0, 0, 0, 0.6)] rounded-2xl resize-y h-[180px]"
+                className="w-full px-5 py-4 border-[1px] border-solid border-[rgba(0, 0, 0, 0.6)] rounded-2xl resize-y h-[150px]"
                 placeholder={props.placeholder}
                 onChange={handleChange} // Ensure handleChange is used
                 {...props}

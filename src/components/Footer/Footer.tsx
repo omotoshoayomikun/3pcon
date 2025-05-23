@@ -93,8 +93,8 @@ function Footer() {
           All Copyright 2025 by 3PCON
         </Link>
         <div className="flex gap-2 items-center">
-          <Link href="">Terms & Condition</Link>
-          <Link href="">Privacy Policy</Link>
+          {/* <Link href="">Terms & Condition</Link>
+          <Link href="">Privacy Policy</Link> */}
         </div>
       </div>
     </footer>

@@ -8,7 +8,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Agile/ Digital Transformation",
-  description: "3PCON IT company help businesses transform their operations and culture to become more agile and responsive"
+  description: "We help businesses transform their operations and culture to become more agile and responsive"
 }
 
 function page() {
