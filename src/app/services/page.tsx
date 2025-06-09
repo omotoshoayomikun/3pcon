@@ -5,14 +5,15 @@ import React from 'react'
 
 
 export const metadata: Metadata = {
-  title: "Service"
+  title: "Services",
+  description: "Our Services include Software Development - Data & Automation - Agile/ Digital Transformation - Consultancy & Advisory - Innovation Management - Managed IT Workforce/ IT Workforce"
 }
 
 function page() {
   const NavInfo = [
      {
       title: "Service",
-      url: "/service",
+      url: "/services",
     }
   ]
   return (

@@ -152,12 +152,12 @@ function ContactUs() {
             height={40}
             objectFit="contain"
           />
-          <Link href="tel:09060000278" className="text-[18px] font-bold mr-1 cursor-pointer text-[#09224E]">
-            09060000278,{" "}
+          <Link href="tel:+2349060000278" className="text-[18px] font-bold mr-2 cursor-pointer text-[#09224E]">
+            +234(0)9060000278,{" "}
           </Link>
-          <Link href="tel:09083511770" className="text-[18px] font-bold cursor-pointer text-[#09224E]">
+          <Link href="tel:+2349083511770" className="text-[18px] font-bold cursor-pointer text-[#09224E]">
             {" "}
-            09083511770
+            +234(0)9083511770
           </Link>
         </div>
         <div className="flex items-center gap-2 mb-8">

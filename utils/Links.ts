@@ -9,7 +9,7 @@ export const NavLinks = [
     },
     {
         title: 'Service',
-        url: '/service'
+        url: '/services'
     },
     {
         title: 'Contact',

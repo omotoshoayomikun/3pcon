@@ -13,7 +13,7 @@ function page() {
   const NavInfo = [
     {
       title: "Service",
-      url: "/service",
+      url: "/services",
     },
     // {
     //   title: "Consultancy-Advisory",

@@ -52,8 +52,8 @@ function Navbar() {
           <ul>
             {NavLinks.map((link, index) => {
               let checkURL = ""
-              if(pathName.includes("service")) {
-                checkURL = "/service"
+              if(pathName.includes("services")) {
+                checkURL = "/services"
               } else {
                 checkURL = pathName
               }

@@ -4,7 +4,7 @@ export const OurServiceData = [
     img_text: "",
     title: "Software Development",
     icon: "/images/solution/x1.svg",
-    url: "/service/software-development",
+    url: "/services/software-development",
     showText: {
       icon: "/images/solution/sd.png",
       text: "Software Development",
@@ -22,7 +22,7 @@ export const OurServiceData = [
     img_text: "",
     title: "Data & Automation",
     icon: "/images/solution/x2.svg",
-    url: "/service/data-automation",
+    url: "/services/data-automation",
     showText: {
       icon: "/images/solution/da.png",
       text: "Data & Automation",
@@ -38,7 +38,7 @@ export const OurServiceData = [
     img_text: "",
     title: "Agile/ Digital Transformation",
     icon: "/images/solution/x3.svg",
-    url: "/service/agile",
+    url: "/services/agile",
     showText: {
       icon: "/images/solution/ad.png",
       text: "Agile/ Digital Transformation",
@@ -56,7 +56,7 @@ export const OurServiceData = [
     img_text: "",
     title: "Consultancy & Advisory",
     icon: "/images/solution/x4.svg",
-    url: "/service/consultancy-advisory",
+    url: "/services/consultancy-advisory",
     showText: {
       icon: "/images/solution/ca.png",
       text: "Consultancy & Advisory",
@@ -73,7 +73,7 @@ export const OurServiceData = [
     img_text: "",
     title: "Innovation Management",
     icon: "/images/solution/x5.svg",
-    url: "/service/innovation",
+    url: "/services/innovation",
     showText: {
       icon: "/images/solution/sdd.png",
       text: "Innovation Management",
@@ -88,12 +88,12 @@ export const OurServiceData = [
   {
     img: "/images/services/service6.png",
     img_text: "",
-    title: "Managed Workforce/ IT Workforce",
+    title: "Managed IT Workforce/ IT Workforce",
     icon: "/images/solution/x6.svg",
-    url: "/service/it-workforce",
+    url: "/services/it-workforce",
     showText: {
       icon: "/images/solution/mw.png",
-      text: "Managed Workforce/IT Workforce",
+      text: "Managed IT Workforce/IT Workforce",
       list: [
         "Agile Teams/ Coaches",
         "Business Analysts",
@@ -130,16 +130,16 @@ export const OurValuesData = [
 
 export const FooterData = {
   section2: [
-    { title: "Software Development", link: "/service/software-development" },
-    { title: "Data & Automation", link: "/service/data-automation" },
-    { title: "Agile/ Digital Transformation", link: "/service/agile" },
-    { title: "Consultancy & Advisory", link: "/service/consultancy-advisory" },
-    { title: "Innovation Management", link: "/service/innovation" },
-    { title: "Managed Workforce/ IT Workforce", link: "/service/it-workforce" },
+    { title: "Software Development", link: "/services/software-development" },
+    { title: "Data & Automation", link: "/services/data-automation" },
+    { title: "Agile/ Digital Transformation", link: "/services/agile" },
+    { title: "Consultancy & Advisory", link: "/services/consultancy-advisory" },
+    { title: "Innovation Management", link: "/services/innovation" },
+    { title: "Managed Workforce/ IT Workforce", link: "/services/it-workforce" },
   ],
   section3: [
     { title: "About 3PCON", link: "/about" },
-    { title: "Our Services", link: "/service" },
+    { title: "Our Services", link: "/services" },
     { title: "Contact Us", link: "/contact" },
   ],
 };

@@ -12,54 +12,54 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         },
         {
             url: `${baseUrl}/contact`,
-            priority: 0.7,
+            priority: 0.9,
             lastModified: new Date(),
             changeFrequency: "yearly"
         },
         {
             url: `${baseUrl}/about`,
-            priority: 0.8,
-            lastModified: new Date(),
-            changeFrequency: "yearly"
-        },
-        {
-            url: `${baseUrl}/service`,
             priority: 0.9,
             lastModified: new Date(),
             changeFrequency: "yearly"
         },
         {
-            url: `${baseUrl}/service/agile`,
+            url: `${baseUrl}/services`,
             priority: 0.9,
             lastModified: new Date(),
             changeFrequency: "yearly"
         },
         {
-            url: `${baseUrl}/service/consultancy-advisory`,
+            url: `${baseUrl}/services/agile`,
             priority: 0.9,
             lastModified: new Date(),
             changeFrequency: "yearly"
         },
         {
-            url: `${baseUrl}/service/data-automation`,
+            url: `${baseUrl}/services/consultancy-advisory`,
             priority: 0.9,
             lastModified: new Date(),
             changeFrequency: "yearly"
         },
         {
-            url: `${baseUrl}/service/innovation`,
+            url: `${baseUrl}/services/data-automation`,
             priority: 0.9,
             lastModified: new Date(),
             changeFrequency: "yearly"
         },
         {
-            url: `${baseUrl}/service/it-workforce`,
+            url: `${baseUrl}/services/innovation`,
             priority: 0.9,
             lastModified: new Date(),
             changeFrequency: "yearly"
         },
         {
-            url: `${baseUrl}/service/software-development`,
+            url: `${baseUrl}/services/it-workforce`,
+            priority: 0.9,
+            lastModified: new Date(),
+            changeFrequency: "yearly"
+        },
+        {
+            url: `${baseUrl}/services/software-development`,
             priority: 0.9,
             lastModified: new Date(),
             changeFrequency: "yearly"

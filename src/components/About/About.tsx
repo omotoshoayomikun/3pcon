@@ -21,7 +21,7 @@ function About() {
  ]
 
  const handleAbout = () => {
-  router.push("/service")
+  router.push("/services")
  }
 
   return (
