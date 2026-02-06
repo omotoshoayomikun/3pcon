@@ -1,7 +1,7 @@
 import SharedHero from '@/components/Hero/SharedHero/SharedHero';
 import ServiceContent from '@/components/Service/ServiceContent';
 import React from 'react'
-import { DataAutomationData } from '../../../../utils/OurServiceData';
+import { DataAutomationData } from '../../../../../utils/OurServiceData';
 import { Metadata } from 'next';
 
 

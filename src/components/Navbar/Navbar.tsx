@@ -87,10 +87,10 @@ function Navbar() {
               </Link>
             </div>
             <div className="mb-2">
-              <Link href="mailto:3PCONtech@gmail.com">
+              <Link href="mailto:info@3pcon.com">
                 <div className="flex items-center gap-2 text-white">
                   <Image src="/images/solution/blue-fly.png" alt="" width={24} height={24} />
-                  <span className="font-bold">3PCONtech@gmail.com</span>
+                  <span className="font-bold">info@3pcon.com</span>
                 </div>
               </Link>  
             </div>

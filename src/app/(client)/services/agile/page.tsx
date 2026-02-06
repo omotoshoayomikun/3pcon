@@ -1,8 +1,8 @@
 import SharedHero from '@/components/Hero/SharedHero/SharedHero';
 import React from 'react'
-import { AgileData } from '../../../../utils/OurServiceData';
 import ServiceContent from '@/components/Service/ServiceContent';
 import { Metadata } from 'next';
+import { AgileData } from '../../../../../utils/OurServiceData';
 
 
 

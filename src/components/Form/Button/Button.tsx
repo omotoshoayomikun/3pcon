@@ -8,12 +8,13 @@ interface ButtonProps {
   btnStyle?: React.CSSProperties;
   iconStyle?: React.CSSProperties;
   disabled?: boolean;
+  className?: string;
   handleClick: () => void;
 }
 
-export const Button = ({ icon, title, btnStyle, iconStyle, disabled, handleClick }: ButtonProps) => {
+export const Button = ({ icon, title, btnStyle, iconStyle, disabled, className, handleClick }: ButtonProps) => {
   return (
-    <button className={`${styles.Cus_button}`} style={btnStyle} onClick={handleClick} disabled={disabled}>
+    <button className={`${styles.Cus_button} ${className}  flex justify-center items-center`} style={btnStyle} onClick={handleClick} disabled={disabled}>
       {
         disabled ? (
           <CgSpinner size={25} className="animate-spin" />

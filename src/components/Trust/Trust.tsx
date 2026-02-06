@@ -23,10 +23,10 @@ function Trust() {
           <div className="special-text" style={{marginBottom: "0px"}}>ABOUT 3PCON</div>
         </div>
         <h1 className="text-heading">
-          Your Trusted Partner <br /> for Tech-Driven Success
+          Your Trusted Partner <br /> for Tech-Enabled Success
         </h1>
         <p className=" my-5">
-          A dynamic tech and digital startup with the vision of helping
+          A dynamic tech and digital company with the vision of helping
           businesses and government organisations become more agile and nimble,
           responding to the fast-changing environment and customer needs,
           through the intelligent application of tech and digital for

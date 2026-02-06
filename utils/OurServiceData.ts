@@ -88,12 +88,12 @@ export const OurServiceData = [
   {
     img: "/images/services/service6.png",
     img_text: "",
-    title: "Managed IT Workforce/ IT Workforce",
+    title: "Managed IT Service / Workforce",
     icon: "/images/solution/x6.svg",
     url: "/services/it-workforce",
     showText: {
       icon: "/images/solution/mw.png",
-      text: "Managed IT Workforce/IT Workforce",
+      text: "Managed IT Service / Workforce",
       list: [
         "Agile Teams/ Coaches",
         "Business Analysts",
@@ -380,7 +380,7 @@ export const AgileData: ServicesInterface = {
 
 export const ItWorkforceData: ServicesInterface = {
   heading: `
- In today’s fast-paced digital landscape, businesses need to be agile and adaptable to stay ahead of the curve. At 3PCON, we provide a Managed IT Workforce whether you want to augment your in-house IT resources or total outsource your IT organisation. We help you bridge the gap between current capabilities and future goals. Helping you to focus on the core of your business. Our team of experts specializes in providing tailored workforce augmentation solutions that meet the unique needs of our clients.`,
+ In today’s fast-paced digital landscape, businesses need to be agile and adaptable to stay ahead of the curve. At 3PCON, we provide IT Service and managed IT Workforce whether you want to augment your in-house IT resources or total outsource your IT organisation. We help you bridge the gap between current capabilities and future goals. Helping you to focus on the core of your business. Our team of experts specializes in providing tailored workforce augmentation solutions that meet the unique needs of our clients.`,
   main_content: [
     {
       image: "/images/solution/it1.jpg",
@@ -487,7 +487,7 @@ export const ItWorkforceData: ServicesInterface = {
 
 export const InnovationData: ServicesInterface = {
   heading: `
-  In today’s fast-paced digital landscape, businesses need to be agile and adaptable to stay ahead of the curve. At 3PCON, we provide a Managed IT Workforce whether you want to augment your in-house IT resources or total outsource your IT organisation. We help you bridge the gap between current capabilities and future goals. Helping you to focus on the core of your business. Our team of experts specializes in providing tailored workforce augmentation solutions that meet the unique needs of our clients.`,
+  In today’s fast-paced digital landscape, businesses need to be agile and adaptable to stay ahead of the curve. At 3PCON, we provide IT Service and IT Workforce whether you want to augment your in-house IT resources or total outsource your IT organisation. We help you bridge the gap between current capabilities and future goals. Helping you to focus on the core of your business. Our team of experts specializes in providing tailored workforce augmentation solutions that meet the unique needs of our clients.`,
   main_content: [
     {
       image: "/images/solution/in1.jpg",

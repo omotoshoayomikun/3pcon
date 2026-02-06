@@ -33,7 +33,7 @@ function About() {
           Empowering Businesses with Tech and Digital Innovation
         </h2>
         <p>
-          A dynamic tech and digital startup committed to helping businesses
+          A dynamic tech and digital company committed to helping businesses
           and government organizations stay agile and responsive in a
           fast-changing world. Through the intelligent application of
           technology and digital solutions, we drive innovation, efficiency,

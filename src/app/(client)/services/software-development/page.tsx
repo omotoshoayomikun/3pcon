@@ -1,6 +1,6 @@
 import SharedHero from "@/components/Hero/SharedHero/SharedHero";
 import React from "react";
-import { SoftwareDevData } from "../../../../utils/OurServiceData";
+import { SoftwareDevData } from "../../../../../utils/OurServiceData";
 import ServiceContent from "@/components/Service/ServiceContent";
 import { Metadata } from "next";
 

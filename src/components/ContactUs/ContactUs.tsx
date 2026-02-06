@@ -5,10 +5,11 @@ import { Input, TextArea } from "../Form/Input/Input";
 import { Button } from "../Form/Button/Button";
 import styles from "./ContactUs.module.css";
 import Image from "next/image";
-import { ToastOptionsInterface, valueInterface } from "../../../utils/types";
+import { valueInterface } from "../../../utils/types";
 import { SendMessage } from "../../../utils/Action";
-import { Bounce, toast } from "react-toastify";
+// import { Bounce, toast } from "react-toastify";
 import Link from "next/link";
+import toast from "react-hot-toast";
 
 function ContactUs() {
   const [value, setValue] = useState<valueInterface>({
@@ -21,17 +22,17 @@ function ContactUs() {
   });
 
   const [loading, setLoading] = useState(false);
-  const ToastOptions: ToastOptionsInterface = {
-    position: "top-right",
-    autoClose: 5000,
-    hideProgressBar: true,
-    closeOnClick: false,
-    pauseOnHover: false,
-    draggable: true,
-    progress: undefined,
-    theme: "light",
-    transition: Bounce,
-  };
+  // const ToastOptions: ToastOptionsInterface = {
+  //   position: "top-right",
+  //   autoClose: 5000,
+  //   hideProgressBar: true,
+  //   closeOnClick: false,
+  //   pauseOnHover: false,
+  //   draggable: true,
+  //   progress: undefined,
+  //   theme: "light",
+  //   transition: Bounce,
+  // };
 
   // const [err, setError] = useState({
   //   name: false,
@@ -55,9 +56,10 @@ function ContactUs() {
       "message",
     ];
     const emptyFields = requiredFields.filter((field) => !value[field].trim());
+    console.log(value)
 
     if (emptyFields.length > 0) {
-      toast.error("Please fill in all required fields", ToastOptions);
+      toast.error("Please fill in all required fields");
       return;
     }
 
@@ -65,19 +67,18 @@ function ContactUs() {
       setLoading(true);
       const response = await SendMessage(`api/send-message`, value);
       if (response.success) {
-        toast.success("🖂 Message sent successfully", ToastOptions);
+        // toast.success("🖂 Message sent successfully", ToastOptions);
+        toast.success("🖂 Message sent successfully");
       } else {
         toast.error(
-          "An Error occur!!! Please re-send the message",
-          ToastOptions
+          "An Error occur!!! Please re-send the message"
         );
       }
       console.log(response);
     } catch (err: unknown) {
       console.log(err);
       toast.error(
-        "🖂 An Error occur!!! Please re-send the message",
-        ToastOptions
+        "🖂 An Error occur!!! Please re-send the message"
       );
     } finally {
       setLoading(false);
@@ -169,10 +170,10 @@ function ContactUs() {
             objectFit="contain"
           />
           <Link
-            href="mailto:3PCONtech@gmail.com"
+            href="mailto:info@3pcon.com"
             className="text-[18px] font-bold cursor-pointer text-[#09224E]"
           >
-            3pcontech@gmail.com
+            info@3pcon.com
           </Link>
         </div>
 
@@ -220,7 +221,7 @@ function ContactUs() {
         <div className="special-text mb-2">CONTACT US</div>
         <h2 className=" font-bold text-[1.5rem] md:text-[1.9rem]">We are here to partner with you</h2>
         <p className="mb-6">
-          schedule your business planning appointment today.
+          let us know how we can be of help
         </p>
         <div>
           <div className="grid grid-cols-2 md:gap-3 gap-2">

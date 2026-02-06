@@ -1,14 +1,14 @@
 import SharedHero from '@/components/Hero/SharedHero/SharedHero';
 import React from 'react'
-import { InnovationData } from '../../../../utils/OurServiceData';
+import { ItWorkforceData } from '../../../../../utils/OurServiceData';
 import ServiceContent from '@/components/Service/ServiceContent';
 import { Metadata } from 'next';
 
 
 
 export const metadata: Metadata = {
-  title: "Innovation Management",
-  description: "3PCON IT company provide an Innovation Hub with a collaborative space where businesses, startups, and experts come together to drive innovation"
+  title: "Managed IT Service / Workforce",
+  description: "3PCON IT company provide experienced agile team members and coaches to help businesses adopt agile methodologies and improve team performance"
 }
 
 function page() {
@@ -18,14 +18,14 @@ function page() {
       url: "/services",
     },
     // {
-    //   title: "Innovation Management",
+    //   title: "Managed Workforce/ IT Workforce",
     //   url: "/innovation",
     // },
   ];
   return (
     <div className="mt-[var(--fixed-h-value)]">
-      <SharedHero value={NavInfo} headerText="Innovation Management" />
-      <ServiceContent datas={InnovationData} />
+      <SharedHero value={NavInfo} headerText="Managed IT Service / Workforce" />
+      <ServiceContent datas={ItWorkforceData} />
     </div>
   );
 }

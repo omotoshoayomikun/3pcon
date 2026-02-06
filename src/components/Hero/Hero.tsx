@@ -7,8 +7,8 @@ import styles from "./Hero.module.css";
 
 const SliderData = [
   {
-    header: "Power Your Digital Future with the Right Solutions",
-    des: "Whether you're starting out or scaling up, we’ll help you achieve real, measurable success. Let's talk today.",
+    header: "Power Your Digital Future with the Right People and Solutions",
+    des: "Whether you're starting out or scaling up, we’ll help you achieve real, measurable success. Talk to us today.",
   },
   {
     header: "Drive Growth Faster with smarter, streamlined solutions.",
