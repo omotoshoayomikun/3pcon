@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Urbanist } from "next/font/google";
+import { Urbanist, Inter, } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 
@@ -13,12 +13,16 @@ import { Toaster } from "react-hot-toast";
 //   subsets: ["latin"],
 // });
 
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+const geistInter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
 
-const urbanist = Urbanist({ subsets: ["latin"], weight: ["400", "700"] });
+const urbanist = Urbanist({ 
+  subsets: ["latin"], 
+  weight: ["100" , "200" , "300" , "400" , "500" , "600" , "700" , "800" , "900"], 
+  variable: "--font-urbanist" // Add this!
+});
 
 export const metadata: Metadata = {
   title: {
@@ -46,12 +50,14 @@ export default function RootLayout({
     <html lang="en">
       <body
         // className={`${geistSans.variable} ${geistMono.variable} ${urbanist.variable} antialiased`}
-        className={`${urbanist.className} antialiased`}
+        className={`${urbanist.className} ${urbanist.variable} ${geistInter.variable} antialiased`}
       >
         {/* <Navbar /> */}
         {children}
         {/* <Footer /> */}
-        <Toaster />
+        <Toaster containerStyle={{
+          zIndex: 99999
+        }} />
       </body>
     </html>
   );

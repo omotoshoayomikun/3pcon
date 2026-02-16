@@ -8,6 +8,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement | HTMLTextArea
   error?: boolean;
   hint?: string; // Optional hint text
   handleChange?: (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  label?: string
 }
 
 export const Input: FC<InputProps> = ({
@@ -17,6 +18,7 @@ export const Input: FC<InputProps> = ({
   error = false,
   hint,
   handleChange,
+  label,
   ...props
 }) => {
 
@@ -36,6 +38,13 @@ export const Input: FC<InputProps> = ({
 
   return (
     <div>
+      {label && (
+    <label
+      className={"mb-1.5 block text-sm font-bold text-gray-700 dark:text-gray-400"}
+    >
+      {label}
+    </label>
+      )}
       <input
         type="text"
         className={inputClasses}

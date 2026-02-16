@@ -1,5 +1,5 @@
 .hero {
-  width: 100vw;
+  width: 100%;
   margin-top: var(--fixed-h-value);
   height: calc(100dvh - var(--fixed-h-value));
   min-height: 600px;
@@ -39,10 +39,11 @@
 }
 
 .hero .side:first-child h1 {
-  font-size: 3.75rem;
+  font-size: 3.4rem;
   font-weight: bold;
   line-height: 4rem;
   margin-bottom: 10px;
+  font-family: var(--font-inter);
 }
 
 .hero .side:first-child p {

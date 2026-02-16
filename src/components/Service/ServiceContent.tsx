@@ -9,7 +9,7 @@ function ServiceContent({datas}:{datas: ServicesInterface}) {
     <p className="mb-5">{datas.heading}</p>
     <div className={styles.flex_wrapper}>
       {datas.main_content.map((data, index) => (
-        <div key={index} className={`${styles.flex_box} mb-14`}>
+        <div key={index} className={`${styles.flex_box} mb-9 md:mb-14`}>
           <div className={`${styles.side1}`}>
             <Image src={data.image} alt="" fill />
           </div>
@@ -22,12 +22,13 @@ function ServiceContent({datas}:{datas: ServicesInterface}) {
             <ul>
               {data.list.map((list, index) => (
                 <li key={index}>
-                  <div className="flex gap-3 mb-5" key={index}>
+                  <div className="flex gap-3 mb-3" key={index}>
                     <Image
                       src="/images/solution/checked.svg"
                       alt=""
                       width={25}
                       height={25}
+                      objectFit='cover'
                     />
                     <p className="text-[18px]">{list}</p>
                   </div>

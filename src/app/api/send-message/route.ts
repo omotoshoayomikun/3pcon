@@ -1,17 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { MailOPtionInterface } from "../../../../utils/types";
+import { CreateTransporter } from "../../../../config/CreateTransporter";
 
-export interface MailOPtionInterface {
-  from: {
-    name: string;
-    address: string;
-  };
-  to: string;
-  subject: string;
-  html: string;
-  text?: string;
-  replyTo?: string;
-}
 
 // Handle OPTIONS preflight requests
 export const OPTIONS = async () => {
@@ -21,16 +11,7 @@ export const OPTIONS = async () => {
 };
 
 // Setup Nodemailer transporter
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  host: "smtp.gmail.com",
-  port: 587,
-  secure: false, // false for 587, true for 465
-  auth: {
-    user: process.env.TRANSPORTER_EMAIL,
-    pass: process.env.TRANSPORTER_PASSWORD,
-  },
-});
+const transporter = CreateTransporter();
 
 // Handle POST request to send the email
 export const POST = async (request: NextRequest) => {
@@ -56,7 +37,7 @@ export const POST = async (request: NextRequest) => {
         name: "3pcon Contact System",
         address: senderEmail,
       },
-      to: "omotoshoayomikun@gmail.com", // Replace with your target email
+      to: senderEmail, // Replace with your target email
       replyTo: email || undefined,
       subject: emailSubject,
       text: `
@@ -163,14 +144,8 @@ Visit https://www.3pcon.com to view more details.
       }
     );
   } catch (err: unknown) {
-    const errorMsg =
-      err instanceof Error ? err.message : "Unexpected error occurred";
+    const errorMsg = err instanceof Error ? err.message : "Unexpected error occurred";
 
-    return NextResponse.json(
-      { message: errorMsg },
-      {
-        status: 500,
-      }
-    );
+    return NextResponse.json( { message: errorMsg },{status: 500,});
   }
 };

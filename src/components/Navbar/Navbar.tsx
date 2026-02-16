@@ -95,18 +95,26 @@ function Navbar() {
               </Link>  
             </div>
             <div className="">
-              <Link href="tel:09060000278">
+              <Link href="tel:+14372989797">
                 <div className="flex items-center gap-2 text-white">
                   <Image src="/images/solution/blue-phone.png" alt="" width={24} height={24} />
-                  <span className="font-bold">09060000278</span>
+                  <span className="font-bold">+14372989797</span>
                 </div>
               </Link>  
             </div>
             <div className="">
-              <Link href="tel:09083511770">
+              <Link href="tel:2349060000278">
                 <div className="flex items-center gap-2 text-white">
                   <Image src="/images/solution/blue-phone.png" alt="" width={24} height={24} />
-                  <span className="font-bold">09083511770</span>
+                  <span className="font-bold">+234(0)9060000278</span>
+                </div>
+              </Link>  
+            </div>
+            <div className="">
+              <Link href="tel:+2349083511770">
+                <div className="flex items-center gap-2 text-white">
+                  <Image src="/images/solution/blue-phone.png" alt="" width={24} height={24} />
+                  <span className="font-bold">+234(0)9083511770</span>
                 </div>
               </Link>  
             </div>

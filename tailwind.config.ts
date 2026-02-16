@@ -8,9 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        urbanist: "var(--font-urbanist)",
-        sans: "var(--font-geist-sans)",
-        mono: "var(--font-geist-mono)",
+        urbanist: ["var(--font-urbanist)", "sans-serif"],
+        inter: ["var(--font-inter)", "sans-serif"],
       },
     },
   },

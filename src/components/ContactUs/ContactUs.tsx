@@ -69,6 +69,14 @@ function ContactUs() {
       if (response.success) {
         // toast.success("🖂 Message sent successfully", ToastOptions);
         toast.success("🖂 Message sent successfully");
+        setValue({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          company: "",
+          message: "",
+        })
       } else {
         toast.error(
           "An Error occur!!! Please re-send the message"
@@ -93,47 +101,47 @@ function ContactUs() {
     value: string;
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   }> = [
-    {
-      label: "Name",
-      name: "name",
-      type: "text",
-      placeholder: "Your Name*",
-      value: value.name,
-      onChange: handleChange,
-    },
-    {
-      label: "Email",
-      name: "email",
-      type: "email",
-      placeholder: "Your E-mail*",
-      value: value.email,
-      onChange: handleChange,
-    },
-    {
-      label: "Phone",
-      name: "phone",
-      type: "tel",
-      placeholder: "Phone*",
-      value: value.phone,
-      onChange: handleChange,
-    },
-    {
-      label: "Company",
-      name: "company",
-      type: "tel",
-      placeholder: "Your Company Name (Optional)*",
-      value: value.phone,
-      onChange: handleChange,
-    },
-    {
-      label: "Subject",
-      name: "subject",
-      type: "text",
-      placeholder: "Subject*",
-      value: value.subject,
-      onChange: handleChange,
-    },
-  ];
+      {
+        label: "Name",
+        name: "name",
+        type: "text",
+        placeholder: "Your Name*",
+        value: value.name,
+        onChange: handleChange,
+      },
+      {
+        label: "Email",
+        name: "email",
+        type: "email",
+        placeholder: "Your E-mail*",
+        value: value.email,
+        onChange: handleChange,
+      },
+      {
+        label: "Phone",
+        name: "phone",
+        type: "tel",
+        placeholder: "Phone*",
+        value: value.phone,
+        onChange: handleChange,
+      },
+      {
+        label: "Company",
+        name: "company",
+        type: "tel",
+        placeholder: "Your Company Name (Optional)*",
+        value: value.phone,
+        onChange: handleChange,
+      },
+      {
+        label: "Subject",
+        name: "subject",
+        type: "text",
+        placeholder: "Subject*",
+        value: value.subject,
+        onChange: handleChange,
+      },
+    ];
 
   return (
     <section className={styles.contact_container}>
@@ -145,21 +153,29 @@ function ContactUs() {
           Whether you&apos;re exploring digital solutions or need expert advice,
           3PCON is just a call or click away. We&apos;d love to hear from you.
         </p>
-        <div className="flex items-center mb-6">
-          <Image
-            src="/images/phone.svg"
-            alt=""
-            width={40}
-            height={40}
-            objectFit="contain"
-          />
-          <Link href="tel:+2349060000278" className="text-[18px] font-bold mr-2 cursor-pointer text-[#09224E]">
-            +234(0)9060000278,{" "}
-          </Link>
-          <Link href="tel:+2349083511770" className="text-[18px] font-bold cursor-pointer text-[#09224E]">
-            {" "}
-            +234(0)9083511770
-          </Link>
+        <div className="mb-6">
+          <div className="flex items-center">
+            <Image
+              src="/images/phone.svg"
+              alt=""
+              width={40}
+              height={40}
+              objectFit="contain"
+            />
+            <Link href="tel:+14372989797" className="text-[18px] font-bold mr-2 cursor-pointer text-[#09224E]">
+              +14372989797,{" "}
+            </Link>
+            <Link href="tel:+2349060000278" className="text-[18px] font-bold mr-2 cursor-pointer text-[#09224E]">
+              +234(0)9060000278,{" "}
+            </Link>
+          </div>
+          <div className="flex">
+            <div className="w-[40px]"></div>
+            <Link href="tel:+2349083511770" className="text-[18px] font-bold cursor-pointer text-[#09224E]">
+              {" "}
+              +234(0)9083511770
+            </Link>
+          </div>
         </div>
         <div className="flex items-center gap-2 mb-8">
           <Image
@@ -196,7 +212,7 @@ function ContactUs() {
               objectFit="contain"
             />
           </Link>
-          <Link href="" className=" cursor-pointer"  target="_blank">
+          <Link href="" className=" cursor-pointer" target="_blank">
             <Image
               src="/images/facebook.svg"
               alt=""
@@ -254,7 +270,7 @@ function ContactUs() {
               title="Send Message"
               icon={"/images/arrow.svg"}
               btnStyle={{ width: "100%", justifyContent: "center" }}
-              disabled={loading}
+              loading={loading}
               handleClick={handleSendMessage}
             />
           </div>

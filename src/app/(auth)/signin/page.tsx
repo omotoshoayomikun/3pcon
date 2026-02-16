@@ -9,11 +9,13 @@ import { FiEye, FiEyeOff } from "react-icons/fi";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import { toast } from "react-toastify";
+import { PostApi } from "../../../../utils/Action";
 
 // 1. Define the Login Schema
 const loginSchema = z.object({
-  username: z.string().min(1, "Username is required").email("Invalid email address"),
-  password: z.string().min(6, "Password must be at least 6 characters"),
+  username: z.string().min(5, "Username must be at least 5 characters"),
+  password: z.string().min(5, "Password must be at least 5 characters"),
 });
 
 type LoginForm = z.infer<typeof loginSchema>;
@@ -29,6 +31,8 @@ export default function SignInForm() {
     username: "",
     password: "",
   });
+
+  const [loading, setLoading] = useState(false)
 
   // 2. Error State
   const [errors, setErrors] = useState<Partial<Record<keyof LoginForm, string>>>({});
@@ -55,33 +59,59 @@ export default function SignInForm() {
     e.preventDefault();
 
     // Final Validation check
-    // const result = loginSchema.safeParse(formData);
+    const result = loginSchema.safeParse(formData);
 
-    // if (!result.success) {
-    //   const fieldErrors: any = {};
-    //   result.error.issues.forEach((issue) => {
-    //     fieldErrors[issue.path[0]] = issue.message;
-    //   });
-    //   setErrors(fieldErrors);
-    //   toast.error("Please fix the errors in the form");
-    //   return;
-    // }
+    if (!result.success) {
+      const fieldErrors: Partial<Record<keyof LoginForm, string>> = {};
+      result.error.issues.forEach((issue) => {
+        const key = issue.path[0] as keyof LoginForm;
+        fieldErrors[key] = issue.message;
+      });
+      setErrors(fieldErrors);
+      toast.error("Please fix the errors in the form");
+      return;
+    }
 
     // Call Context login
-    // await loginUser(formData.username, formData.password);
+    try {
+      setLoading(true)
+      const value = { username: formData.username, password: formData.password }
+      const response = await PostApi('api/auth/signin', value);
 
-    router.push("/admin")
+      if (response.success) {
+        toast.success(response.message)
+        router.push("/admin/dashboard")
+
+      } else {
+        toast.error(response.message)
+      }
+    } finally {
+      setLoading(false)
+    }
+
   };
 
   return (
 
-    <div className="relative p-6 bg-white z-1 dark:bg-gray-900 sm:p-0">
+    <div className="relative p-6 py-0 bg-white z-1 dark:bg-gray-900 sm:p-0">
       {/* <ThemeProvider> */}
       <div className="relative flex lg:flex-row w-full h-screen justify-center flex-col  dark:bg-gray-900 sm:p-0">
         <div className="flex flex-col flex-1 lg:w-1/2 w-full">
           <div className="flex flex-col justify-center flex-1 w-full max-w-md mx-auto">
             <div>
-              <div className="mb-5 sm:mb-8">
+              <div className="lg:hidden flex justify-center">
+                <Link href="/" className="block mb-4">
+                  <Image
+                    width={190}
+                    height={40}
+                    src="/images/logoFull.png"
+                    alt="Logo"
+                    objectFit="contain"
+                  />
+                </Link>
+              </div>
+
+              <div className="mb-5 sm:mb-8  text-center lg:text-left">
                 <h1 className="mb-2 font-semibold text-gray-800 text-title-sm dark:text-white/90 sm:text-title-md">
                   Sign In
                 </h1>
@@ -158,7 +188,7 @@ export default function SignInForm() {
                         // className="w-full" 
                         handleClick={() => { }}
                         // size="sm" 
-                        // loading={loading.login}
+                        loading={loading}
                         title="Sign in"
                       />
                     </div>

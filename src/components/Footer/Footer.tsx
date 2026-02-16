@@ -90,7 +90,7 @@ function Footer() {
             width={16}
             height={16}
           />
-          All Copyright 2025 by 3PCON
+          All Copyright {new Date().getFullYear()} by 3PCON
         </Link>
         <div className="flex gap-2 items-center">
           {/* <Link href="">Terms & Condition</Link>

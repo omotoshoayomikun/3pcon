@@ -29,7 +29,7 @@ function About() {
     <SharedHero value={NavInfo} headerText="About us" />
     <div className="px-[var(--shared-px)] py-[var(--shared-py)] flex flex-col-reverse md:flex-row gap-10 ">
       <div className="flex-[1.5]">
-        <h2 className="mb-7 text-[35px] font-extrabold leading-10">
+        <h2 className="mb-7 text-heading">
           Empowering Businesses with Tech and Digital Innovation
         </h2>
         <p>

@@ -4,16 +4,23 @@ import React, { useEffect, useState } from "react";
 
 
 import styles from "./Hero.module.css";
+import EventTemplate, { Webiner1 } from "./EventTemplate";
 
 const SliderData = [
   {
     header: "Power Your Digital Future with the Right People and Solutions",
     des: "Whether you're starting out or scaling up, we’ll help you achieve real, measurable success. Talk to us today.",
+    event: false
   },
   {
     header: "Drive Growth Faster with smarter, streamlined solutions.",
     des: "3PCON delivers simple, effective digital solutions tailored to help your business grow, streamline operations, and achieve measurable success.",
+    event: false
   },
+  {
+    template: <Webiner1 /> ,
+    event: true
+  }
 ];
 
 function Hero() {
@@ -53,7 +60,12 @@ function Hero() {
         style={{ transform: `translateX(-${currentIndex * 100}vw)` }}
       >
         {SliderData.map((data, index) => (
-          <div className={styles.hero_container} key={index}>
+          data.event ? (
+            <EventTemplate key={index}>
+              {data.template}
+            </EventTemplate>
+          ) : (
+            <div className={styles.hero_container} key={index}>
             <div className={styles.side}>
               <h1>{data.header}</h1>
               <p>
@@ -65,7 +77,10 @@ function Hero() {
               </div> */}
             </div>
           </div>
-        ))}
+          )
+        )
+
+        )}
       </div>
       <div className={styles.indicator_container}>
         {SliderData.map((data, index) => (
